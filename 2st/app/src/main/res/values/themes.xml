@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme._2st" parent="Base.Theme._2st" />
+
+    <style name="ThemeOverlay._2st.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
 </resources>

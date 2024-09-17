@@ -4,4 +4,8 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="f2">Frag 2</string>
     <string name="f3">Frag 3</string>
+    <string name="returnBack">Return Back</string>
+    <string name="name">Vlad</string>
+    <string name="data">1431y</string>
+    <string name="email">14Cepich31@gmail.com</string>
 </resources>

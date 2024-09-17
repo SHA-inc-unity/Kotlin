@@ -17,4 +17,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    fun navigateToFF3() {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.nav_host_fragment, FF3())
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+    fun navigateToFF1(){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.nav_host_fragment, FF1())
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
 }

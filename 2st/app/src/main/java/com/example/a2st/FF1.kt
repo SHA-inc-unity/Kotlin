@@ -18,7 +18,7 @@ class FF1 : Fragment(R.layout.fragment_f_f1) {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.btn_to_ff2).setOnClickListener {
-            findNavController().navigate(R.id.firstFragment)
+            findNavController().navigate(R.id.secondFragment)
         }
 
         view.findViewById<Button>(R.id.btn_to_ff3).setOnClickListener {

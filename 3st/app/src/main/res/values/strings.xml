@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">2st</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="f2">Frag 2</string>
+    <string name="f3">Frag 3</string>
+</resources>

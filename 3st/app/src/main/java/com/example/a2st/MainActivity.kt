@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun navigateToFF3() {
+    fun navigateToFF3(bundle: Bundle) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.nav_host_fragment, FF3())
         transaction.addToBackStack(null)

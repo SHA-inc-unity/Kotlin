@@ -12,29 +12,35 @@ import com.example.a2st.R
 import com.example.a2st.ViewModel.FF1_VM
 
 class FF1 : Fragment(R.layout.fragment_f_f1) {
-    private lateinit var FF1_VM : FF1_VM
+    private var FF1_VM : FF1_VM = FF1_VM()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        FF1_VM = ViewModelProvider(requireActivity()).get(com.example.a2st.ViewModel.FF1_VM::class.java)
 
         view.findViewById<Button>(R.id.btn_to_ff2).setOnClickListener {
             val logEditText = view.findViewById<EditText>(R.id.log)
             val passEditText = view.findViewById<EditText>(R.id.pass)
             FF1_VM.setAll(logEditText, passEditText)
-            findNavController().navigate(R.id.secondFragment)
+
+            val bundle = Bundle().apply {
+                putString("login", logEditText.text.toString())
+                putString("password", passEditText.text.toString())
+            }
+
+            findNavController().navigate(R.id.secondFragment, bundle)
         }
 
         view.findViewById<Button>(R.id.btn_to_ff3).setOnClickListener {
             val logEditText = view.findViewById<EditText>(R.id.log)
             val passEditText = view.findViewById<EditText>(R.id.pass)
             FF1_VM.setAll(logEditText, passEditText)
-            (activity as MainActivity).navigateToFF3()
+
+            val bundle = Bundle().apply {
+                putString("login", logEditText.text.toString())
+                putString("password", passEditText.text.toString())
+            }
+
+            (activity as MainActivity).navigateToFF3(bundle)
         }
     }
-}
-
-public fun ViewModelProvider.get(modelClass: Class<FF1_VM>): FF1_VM {
-    return this.get(modelClass)
 }
